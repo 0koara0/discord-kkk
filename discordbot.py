@@ -17,5 +17,8 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+@client.event
+async def on_voice_state_update(member, before, after):
+    await ctx.send('pong')
 
 bot.run(token)
